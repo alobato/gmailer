@@ -9,7 +9,9 @@ class Spec < Thor
   def all
     system 'bundle exec rspec spec'
   end
+end
 
+class Gem < Thor
   desc 'build', 'Build gem'
   def build
     system "gem build gmailer.gemspec"
